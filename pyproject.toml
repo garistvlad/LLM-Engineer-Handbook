@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "llm-twin"
+version = "0.1.0"
+description = "LLM Twin from Scratch based on 'LLM Engineer' book"
+authors = ["Vladislav Garist <vv.garist@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+click = "^8.1.8"
+loguru = "^0.7.3"
+pymongo = "^4.10.1"
+httpx = "^0.28.1"
+poethepoet = "^0.32.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pre-commit = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poe.tasks]
+test = "pytest -v"
